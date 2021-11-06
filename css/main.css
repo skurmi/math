@@ -1,0 +1,107 @@
+.button {
+  font: bold 25px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 12px;
+}
+.button1{
+  border-radius: 12px;
+}
+.center{
+  text-align: center;
+}
+
+button {
+  border-radius: 4px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 320px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.bg_rgba {
+  background-image: url(mages/pari1.jpg);
+  background-color: rgba(255, 255, 255, 0.486);
+  background-blend-mode: overlay;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+body {
+   background-color: #2e4057;
+   margin:0;
+}
+
+.patterns {
+  height: 100vh;
+}
+
+
+
+svg text {
+  font-family: Lora;
+  letter-spacing: 10px;
+  stroke: #ffa5d8;
+  font-size: 50px;
+  font-weight: 700;
+  stroke-width: 3;
+
+  animation: textAnimate 5s infinite alternate;
+
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill:hsl(189, 68%, 75%)
+
+  }
+
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%,0%)
+  }
+
+}

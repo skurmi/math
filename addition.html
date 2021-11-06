@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <input type="button" value="Generate Additions." onclick="generate_table()">
+  <a href="mathOperation.html">Back</a>
+  <script type="text/javascript">
+function add(){
+  var a,b,c;
+  a=number(document.getElementById("first").value);
+  b=number(document.getElementById("second").value);
+}
+function generate_table() {
+  // get the reference for the body
+
+  var body = document.getElementsByTagName("body")[0];
+
+  // creates a <table> element and a <tbody> element
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+  // creating all cells
+  for (var i = 0; i < 2; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 4; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(getRandomIntInclusive(10000,90000));
+      var cellText1 = document.createTextNode(getRandomIntInclusive(10000,90000));
+      //cellText.style.textAlign = "center";
+      cell.appendChild(cellText);
+      cell.appendChild(document.createElement("br"));
+      cell.appendChild(cellText1);
+      cell.appendChild(document.createElement("br"));
+      cell.appendChild(document.createElement("input"));
+      cell.style.textAlign="right";
+      row.appendChild(cell);
+    }
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
+  }
+
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  body.appendChild(tbl);
+  // sets the border attribute of tbl to 2;
+  tbl.setAttribute("border", "2");
+}
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
+
+  </script>
+
+  </body>
+</html>
