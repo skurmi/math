@@ -11,7 +11,8 @@
   <body>
     <a href="index.html">Back</a>
     <div class="" id="content2">
-  <input type="button" value="Generate Multiplications." onclick="generate_table()">
+  <input type="button" value="Generate Multiplications." onclick="generate_table1()">
+  <input type="button" value="Generate Multiplications." onclick="generate_table2()">
   <p>Date/Time: <span id="datetime"></span></p>
 
 <script>
@@ -28,7 +29,7 @@ function add(){
   a=number(document.getElementById("first").value);
   b=number(document.getElementById("second").value);
 }
-function generate_table() {
+function generate_table1() {
   // get the reference for the body
 
   //var body = document.getElementsByTagName("body")[0];
@@ -48,6 +49,38 @@ var body = document.getElementById("content2");
       // the end of the table row
       var cell = document.createElement("td");
       var cellText = document.createTextNode(getRandomIntInclusive(2,9));
+      var cellText1 = document.createTextNode(getRandomIntInclusive(3,9));
+      //cellText.style.textAlign = "center";
+      cell.appendChild(cellText);
+      cell.appendChild(document.createElement("br"));
+      cell.appendChild(cellText1);
+      cell.appendChild(document.createElement("br"));
+      var input = document.createElement("input");
+      input.style.textAlign = "right";
+      cell.appendChild(input);
+      cell.style.textAlign="right";
+      row.appendChild(cell);
+    }
+      function generate_table2() {
+  // get the reference for the body
+
+  //var body = document.getElementsByTagName("body")[0];
+var body = document.getElementById("content2");
+  // creates a <table> element and a <tbody> element
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+  // creating all cells
+  for (var i = 0; i < 2; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 4; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(getRandomIntInclusive(11,99));
       var cellText1 = document.createTextNode(getRandomIntInclusive(3,9));
       //cellText.style.textAlign = "center";
       cell.appendChild(cellText);
